@@ -6,15 +6,18 @@
               method="post"
               data-mage-init='{"validation": {"errorClass": "mage-error"}}'
               id="account-status-form">
-            <div class="field">
-                <?= $block->getBlockHtml('formkey') ?>
-                <label class="label" for="account_status"><span><?= $block->escapeHtml(__('Account Status:')) ?></span></label>
-                <div class="control">
-                    <input name="account_status" type="text" id="account_status"
-                           placeholder="<?= $block->escapeHtmlAttr(__('Enter your status')) ?>"
-                           data-validate="{required:true}"/>
+            <fieldset class="fieldset">
+                <div class="field">
+                    <?= $block->getBlockHtml('formkey') ?>
+                    <label class="label" for="account_status"><span><?= $block->escapeHtml(__('Account Status:')) ?></span></label>
+                    <div class="control">
+                        <input name="account_status" type="text" id="account_status"
+                               placeholder="<?= $block->escapeHtmlAttr(__('Enter your status')) ?>"
+                               data-validate="{required:true}"
+                        />
+                    </div>
                 </div>
-            </div>
+            </fieldset>
             <div class="actions">
                 <button class="action account-status-button primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>" type="submit">
                     <span><?= $block->escapeHtml(__('Save')) ?></span>
