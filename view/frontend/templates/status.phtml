@@ -1,0 +1,21 @@
+<?php if($block->customerLoggedIn()): ?>
+    <li class="status" data-bind="scope: 'customer-status'">
+        <!-- ko if: customer().status  -->
+        <span data-bind="text: 'Status: '"></span>
+        <span data-bind="text: customer().status"></span>
+        <!-- /ko -->
+    </li>
+    <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_Ui/js/core/app": {
+                        "components": {
+                            "customer-status": {
+                                "component": "Magento_Customer/js/view/customer"
+                            }
+                        }
+                    }
+                }
+            }
+    </script>
+<?php endif; ?>
